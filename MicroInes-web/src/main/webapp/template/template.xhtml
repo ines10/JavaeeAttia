@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:pf="http://jsf.playerfinder.net/components"
+	  xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+		body, html {
+			height: 100%;
+			line-height: 1.8;
+		}
+
+		/* Full height image header */
+		.bgimg-1 {
+			background-position: center;
+			background-size: cover;
+			background-image: url("https://cdn.uconnectlabs.com/wp-content/uploads/sites/5/2017/08/AdobeStock_114025608.jpeg");
+			min-height: 150%;
+		}
+
+		.w3-bar .w3-button {
+			padding: 16px;
+		}
+	</style>
+
+
+
+</h:head>
+<body> <ui:include src="/template/header.xhtml" />
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+	<h3 class="w3-center">#{page_name}</h3>
+
+	<div class="w3-row-padding w3-center" style="margin-top:64px">
+
+		<ui:insert name="menu" /> <ui:insert name="content" />
+
+
+
+	</div>
+</div>
+
+
+
+
+
+<ui:include src="/template/footer.xhtml" />
+<script>
+	// Modal Image Gallery
+	function onClick(element) {
+		document.getElementById("img01").src = element.src;
+		document.getElementById("modal01").style.display = "block";
+		var captionText = document.getElementById("caption");
+		captionText.innerHTML = element.alt;
+	}
+
+
+	// Toggle between showing and hiding the sidebar when clicking the menu icon
+	var mySidebar = document.getElementById("mySidebar");
+
+	function w3_open() {
+		if (mySidebar.style.display === 'block') {
+			mySidebar.style.display = 'none';
+		} else {
+			mySidebar.style.display = 'block';
+		}
+	}
+
+	// Close the sidebar with the close button
+	function w3_close() {
+		mySidebar.style.display = "none";
+	}
+</script>
+</body> </html>

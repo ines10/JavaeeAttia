@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				template="/WEB-INF/template/template.xhtml">
+	<ui:define name="title">
+	<title>Add Your Event</title>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+<center>
+		<h:form>
+  	   <div>
+  	   <h:outputText value="Ref Event:" />
+  	   <br/>
+  	   <h:inputText value="#{eventBean.idEvent}" />
+		   <br/>
+
+		   <h:outputText value="name:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.name}" />
+		   <br/>
+
+		   <h:outputText value="imageE:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.imageE}" />
+		   <br/>
+
+		   <h:outputText value="description:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.description}" />
+		   <br/>
+		   <h:outputText value="hours:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.hours}" />
+		   <br/>
+		   <h:outputText value="nbApply:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.nbApply}" />
+		   <br/>
+		   <h:outputText value="nbVue:" />
+		   <br/>
+		   <h:inputText value="#{eventBean.nbVue}" />
+		   <br/>
+		   <h:outputText value="Deadline" />
+		   <br/>
+		   <h:inputText value="#{eventBean.deadline}" styleClass="w3-input w3-border">
+			   <f:convertDateTime pattern="yyyy-MM-dd"/>
+		   </h:inputText>
+		   <br/>
+		   <h:outputText value="date_pub" />
+		   <br/>
+		   <h:inputText value="#{eventBean.date_publication}" styleClass="w3-input w3-border">
+			   <f:convertDateTime pattern="yyyy-MM-dd"/>
+		   </h:inputText>
+		   <br/>
+		   <h:outputText value="DateD" />
+		   <br/>
+		   <h:inputText value="#{eventBean.dateD}" styleClass="w3-input w3-border">
+			   <f:convertDateTime pattern="yyyy-MM-dd"/>
+		   </h:inputText>
+		   <br/>
+		   <h:outputText value="DateF" />
+		   <br/>
+		   <h:inputText value="#{eventBean.dateF}" styleClass="w3-input w3-border">
+			   <f:convertDateTime pattern="yyyy-MM-dd"/>
+		   </h:inputText>
+		   <h:outputText></h:outputText>
+
+	   </div>
+  	   <div>
+  	   <br/>
+  	   <h:outputText value="Add it Now:" />
+  	   <br/>
+  	      	   </div>
+
+  	   <br/>
+      <h:commandButton action="#{eventBean.AddEvent()}"  value="Add Your event" class="main_btn"></h:commandButton>
+	   </h:form>
+</center>
+	</ui:define>
+
+</ui:composition>

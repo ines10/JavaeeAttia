@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:p="http://primefaces.org/ui">
+	   
+<h:head>
+	<title>POC AWS PI</title>
+</h:head>
+<h:body>
+	<ui:repeat value="${eventBean.all}" var="event">
+		<!--================Welcome Area =================-->
+		<div class="Search">
+			<section class="welcome_area pad_btm">
+				<div class="container">
+					<div class="welcome_inner row">
+						<div class="col-lg-5" style="width: 300%;">
+							<div class="categories_post">
+
+								<div class="categories_details">
+									<div class="categories_text">
+
+										<div class="border_line"></div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 offset-lg-1">
+							<div>
+
+								<div class="media-body">
+									<h2 style="color: black">
+										<span><h:outputText value="${event.get('Name')}" /></span>
+									</h2>
+									<br />
+
+
+									<p>
+										<h:outputText value="${event.get('description')}" />
+									</p>
+
+								</div>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--================End Welcome Area =================-->
+	</ui:repeat>
+
+</h:body>
+</html>

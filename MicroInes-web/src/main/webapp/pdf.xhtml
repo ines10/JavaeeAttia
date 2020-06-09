@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+  		<title> <h:outputText value="${eventBean.eventDetail.get('Name')}" /></title>
+  	</h:head>
+    <h:body>
+        <img src="/img/Unknown.png" style="position: absolute; top: 0; left: 0;"  width="150" height="50"/>
+        <label style="position: absolute; top: 0; right: 0; text-align:right;color: #2c28b1"><span>"<h:outputLabel value="${eventBean.eventDetail.get('Name')}" />"</span></label>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+         <h1 style="color: #6f42c1;text-align: center;"><span>Your Event "<h:outputLabel value="${eventBean.eventDetail.get('description')}" /></span>" description </h1>
+         <br/>
+         <br/>
+
+      <h4>From:</h4><h:outputLabel value="${eventBean.eventDetail.get('dateD')}" /><h4>To:</h4><h:outputLabel value="${eventBean.eventDetail.get('dateF')}" />
+       <br/>
+
+
+          <br/>
+     	<div>
+     	<br/>
+     	<textarea ><h:outputText value="${eventBean.eventDetail.get('description')}"></h:outputText></textarea>
+   </div>
+
+     <div style="text-align: center;">
+      	<br/>
+      </div>
+
+     <br/>
+     <br/>
+     <div style="text-align: center;">
+      	<br/>
+     </div>
+
+    </h:body>
+</html>
